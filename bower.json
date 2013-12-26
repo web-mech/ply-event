@@ -1,0 +1,21 @@
+{
+  "name": "ply-event",
+  "version": "1.0.0",
+  "authors": [
+    "Mike P <webmech@gmail.com>"
+  ],
+  "description": "A simple event interface for event-driven apps",
+  "main": "Event.js",
+  "keywords": [
+    "event",
+    "events"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
