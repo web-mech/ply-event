@@ -1,4 +1,4 @@
-define(['core/Class'],function(Class){
+var _event = function(Class){
     'use strict';
 
     //Ply - https://github.com/rafikk/ply.git
@@ -81,7 +81,7 @@ define(['core/Class'],function(Class){
 
             if (listeners[note]) {
                 for(var i=0; i < listeners[note].length; i++){
-                    if (this.id === handle[1]) {
+                    if (listeners[note][i].id === handle[1]) {
                         listeners[note].splice(i, 1);
                     }
                 }
@@ -172,8 +172,15 @@ define(['core/Class'],function(Class){
         }())
     });
 
-    return new Event();
-});
+    return Event;
+};
+
+if (typeof define != 'undefined' && define != null) 
+    define([],function(){ return _event; });
+
+
+if (typeof exports != 'undefined' && exports != null)
+    module.exports = _event;
 
 
     
